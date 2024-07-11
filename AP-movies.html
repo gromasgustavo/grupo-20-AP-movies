@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP-movies</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+        rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacion navbar navbar-expand-lg navbar-light">
+
+            <a class="anclaLogo navbar-brand item-AP-movies" href="#">
+                🍕 AP-Movies
+            </a>
+
+            <!-- Botón para colapsar en pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Elementos del navbar que se colapsan en pantallas pequeñas -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto listaNav">
+                    <li class="nav-item listaItem">
+                        <a class="nav-link linkNav iniciarSesion" href="#tendenciasContainer">
+                            <i class="fas fa-film"></i> Ver Películas
+                        </a>
+                    </li>
+                    <li class="nav-item listaItem">
+                        <a class="nav-link linkNav iniciarSesion" href="./iniciosesion.html">
+                            <i class="fa fa-user"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contador-visitas">
+        <!-- Contador de visitas -->
+        <a href="https://websmultimedia.com/contador-de-visitas-gratis" title="Contador-visitas">
+            <img alt="contador-visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=17583"></a><br>
+        <!-- Fin Contador de visitas -->
+    </div>
+
+    <main id="main" class="main">
+
+        <section id="principal"
+            class="container-fluid d-flex justify-content-center align-items-center bg-prymary custom-style"
+            style="min-height: 40vh; position: relative; font-size: medium; color: wheat;">
+            <div class="row text-center w-100">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <h1 class="tituloPrincipal">Mira tus películas gratis</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="imagen-antes-h1">
+                        <img src="./backgrounds/fondoLogo.jpeg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+                    <h1>AP-movies 🍕</h1>
+                    <h2>fácil y en un solo lugar</h2>
+                </div>
+                <p>ESTE FRONT ESTA BAJADO DE CODO A CODO, CAC-MOVIES. EL BACK ES PARTE DEL DESARROLLO DEL CURSO, GRACIAS
+                    A LA
+                    COLABORACION DE LA PROFE GISELE GONZALEZ!</p>
+            </div>
+        </section>
+        <hr>
+
+        <section id="tendencias" class="peliculasTendencia container bg-warning">
+
+            <div class="peliculas row" id="tendenciasContainer">
+                <!-- Aquí se cargarán las películas-->
+            </div>
+
+            <div class="text-center">
+                <div class="d-flex justify-content-between">
+                    <button id="botonAnterior" class="btn btn-primary boton anterior">
+                        <i class="fas fa-chevron-left"></i> <!-- Icono de flecha izquierda -->
+                    </button>
+                    <button id="botonSiguiente" class="btn btn-primary boton siguiente">
+                        <i class="fas fa-chevron-right"></i> <!-- Icono de flecha derecha -->
+                    </button>
+                </div>
+            </div>
+
+        </section>
+        <hr>
+
+        <section data-aos="flip-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="2000"
+            class="peliculasAclamadas container bg-success">
+            <h3 class="tituloSection">Las más vistas</h3>
+            <div class="aclamadas" id="aclamadasContainer">
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <nav class="navegacion container">
+            <div class="row text-center">
+                <div class="col-sm-3">
+                    <a class="linkNav" href="#">Términos y condiciones</a>
+                </div>
+                <div class="col-sm-3">
+                    <a class="linkNav" href="#">Preguntas frecuentes</a>
+                </div>
+                <div class="col-sm-3">
+                    <a class="linkNav" href="#">Ayuda</a>
+                </div>
+                <div class="col-sm-3">
+                    <a class="linkNav administradorPeliculas" href="./adm-peli.html">Administrador Películas <i
+                            class="fa fa-gear"></i></a>
+                </div>
+                <div class="col-sm-3">
+                    <a class="linkNav administradorUsuarios" href="./crud_users.php">Administrador Usuarios <i
+                            class="fa fa-gear"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- API clima -->
+        <section class="container-clima mt-4"></section>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card text-center bg-dark text-white card-custom-width">
+                    <div class="card-body-clima">
+                        <h5 id="temperatura-valor">22°</h5>
+                        <h5 id="temperatura-descripcion">Nublado</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center bg-primary text-white card-custom-width">
+                    <div class="card-body-clima">
+                        <h5 id="ubicacion">Ubicación</h5>
+                        <!-- Icono animado -->
+                        <img id="iconoAnimado" src="" width="64" height="64" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center bg-info text-white card-custom-width">
+                    <div class="card-body-clima">
+                        <h5>Vel. del viento</h5>
+                        <h5 id="vientoVelocidad">Viento Velocidad</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </footer>
+
+    <!-- Script API clima -->
+    <script src="./js/apiClima.js"></script>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Script personalizado para cargar películas -->
+    <script src="../AP-movies/js/cargar_peliculas_index.js"></script>
+</body>
+
+</html>
